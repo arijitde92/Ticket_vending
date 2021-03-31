@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Ticket</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="application/javascript" src="ticketScript.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Bestilling av kinobiletter</h1>
+        </header>
+
+        <div id="main">
+<!--            <form id="ticket_form">-->
+                <table>
+                    <tr>
+                        <td>
+                            <label for="movieName">Velg film her:</label>
+                        </td>
+                        <td>
+                            <select name="movieName" id="movieName">
+                                <option value="none">--SELECT--</option>
+                                <option value="endgame">Avengers Endgame</option>
+                                <option value="wire">Outside The Wire</option>
+                                <option value="fury">Fury</option>
+                                <option value="transformers">Transformers</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p id="movieErr" style="color: red"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="quantity">Antall:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="quantity" name="quantity">
+                        </td>
+                        <td>
+                            <p id="ticketErr" style="color: red"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="firstName">Fornavn:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="firstName" name="firstName">
+                        </td>
+                        <td>
+                            <p id="fnameErr" style="color: red"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lastName">Etternavn:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="lastName" name="lastName">
+                        </td>
+                        <td>
+                            <p id="lnameErr" style="color: red"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone">Nummer:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="phone" name="phone">
+                        </td>
+                        <td>
+                            <p id="numberErr" style="color: red"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">E-post:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="email" name="email">
+                        </td>
+                        <td>
+                            <p id="emailErr" style="color: #ff0000"></p>
+                        </td>
+                    </tr>
+                </table>
+                <button type="button" value="Buy Ticket" onclick="validate();">Buy Ticket</button>
+<!--            </form>-->
+            <div id="errorDiv"></div>
+            <H2>Alle billetter</H2>
+            <H3 id="tickets">Film Antall Fornavn Etternavn Telefonnr Epost</H3>
+            <div id="displayDiv">
+            </div>
+            <button value="Slett alle billettene" onclick="deleteCustomers();">Delete Customers</button>
+        </div>
+        <footer>
+            &copy; Rick Das Bhowmick, 2021
+        </footer>
+    </div>
+</body>
+</html>
